@@ -78,7 +78,7 @@
 
             /* Imagen */
             .card-img-top {
-                width: 60%;
+                width: 100%;
                 display: block;
                 margin: 0 auto;
             }
@@ -108,6 +108,11 @@
             .btn:hover {
                 background: darkblue;
             }
+            .icons i {
+                display: block;
+                padding: 8px 12px;
+                background: lightgray;
+            }
 
             
         </style>
@@ -132,20 +137,24 @@
         </select>  
         <p>Este párrafo está despues del select #jue (aplica ~)</p>
         
-        <div class="card" style="width: 90%">
-            <div class="card-header">Header</div>
+        <div class="card" style="width: 60%">
+            <div class="card-header">Header - Ejemplo de Card</div>
             <img class="card-img-top" src="img/wallpaper.png" alt="top">
             <div class="card-body">
-                <h4 class="card-title">Producto</h4>
-                <p class="card-text">Descripción del producto, y a la vez probando.</p>
+                <h1 class="card-title">Wallpaper Satoru Gojo</h1>
+                <p class="card-text">Formato de la imagen: PNG<br>Resolución: 2184x1148<br>Tamaño:10.05 MB</p>
+                <b class="card-text" style="color:black; font-size: 1.4vw;">$29.990</b>
             </div>
             <div class="card-footer">
-                <a href="producto.php" class="btn btn-primary">Ver producto</a>
+                <a href="producto.php" class="btn btn-primary">☛ Ver imagen completa</a>
             </div>
         </div>
+
         <h2>Font Awesome</h2>
-        <i class="fa fa-check" style="font-size: 1vw; color: green"></i>
-        <i class="fa fa-cart-plus" style="font-size: 2vw; color: green"></i>
+        <div class="icons">
+            <i class="fa fa-check" style="font-size: 2vw; color: green"> Artículo disponible en tienda</i>
+            <i class="fa fa-cart-plus" style="font-size: 2vw; color: green"> Agregar al carro</i>
+        </div>
     </body>
 </html>
 
