@@ -1,25 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>DWM / EXP 3</title>
+        <title>DWM / Experimento 3</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            #parrafo1 {
+            /* Centrar todo el body */
+            body {
+                text-align: center;
+            }
+            /* CSS ID selector */
+            #parrafo1 { 
                 text-align: center;
                 color: red;
+                font-family: 'Times New Roman', Times, serif;
             }
-            .parrafo2 {
+            /* CSS Class selector */
+            .parrafo2 { 
                 text-align: left;
                 color: blue;
+                font-family: 'Open Sans', sans-serif;
             }
+            /* CSS Grouping selector (, or) */
+            h1, h2, p { 
+                color: black;
+            }
+            /* CSS Universal selector */
+            * {
+                font-family: Arial, sans-serif;
+            }
+            /* CSS Nested selector (Descendiente espacio) */
+            #com option {
+                font-size: 1vw;
+                color: orange;
+            }
+            /* CSS Nested selector (Hijo directo >) */
+            #com > option:first-child {
+                font-size: 1.2vw;
+                color:plum;
+            }
+            /* CSS Nested selector (Hermano general ~)*/
+            #jue ~ p {
+                font-size: 1vw;
+                color: violet;
+            }
+            /* CSS Nested advanced selector */
+            #com {
+                border: 2px solid #000000;
+                /*option {
+                    font-size: 1vw;
+                    color: red;
+                    &:hover {
+                        color: blue;
+                    }
+                }*/
+            }
+            /* Estilo básico para la card */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                width: 90%;
+                margin: 20px auto;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                overflow: hidden;
+                text-align: center;
+            }
+
+            /* Header */
+            .card-header {
+                background: #f0f0f0;
+                padding: 10px;
+                font-weight: bold;
+                text-align: center;
+                border-bottom: 1px solid #ccc;
+            }
+
+            /* Imagen */
+            .card-img-top {
+                width: 60%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            /* Cuerpo */
+            .card-body {
+                padding: 10px;
+            }
+
+            /* Footer */
+            .card-footer {
+                background: #f9f9f9;
+                padding: 10px;
+                text-align: center;
+                border-top: 1px solid #ccc;
+            }
+
+            /* Botón dentro de la card */
+            .btn {
+                display: inline-block;
+                padding: 8px 12px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                background: blue;
+            }
+            .btn:hover {
+                background: darkblue;
+            }
+
+            
         </style>
     </head>
     <body>
-        <p id="parrafo1">algo1</p>
-        <p class="parrafo2">algo2</p>
-        <p>algo3</p>
+        <h1>Ejemplo de Selectores CSS</h1>
+        <p id="parrafo1">Este párrafo usa un selector ID (#parrafo1)</p>
+        <p class="parrafo2">Este párrafo usa un selector de clase (.parrafo2)</p>
+        <p>Este párrafo se ve con el selector por etiqueta (p)</p>
+        <h2>Select con selectores descendientes</h2>
+        <select name="Comuna" id="com">
+            <option value="1">Santiago</option>
+            <option value="2">Valparaíso</option>
+            <option value="3">Concepción</option>
+        </select>
+        <h2>Selector hermano general (~)</h2>
+        <select name="Juegos" id="jue">
+            <option value="1">Geometry Dash</option>
+            <option value="2">The Outlast Trials</option>
+            <option value="3">Phasmophobia</option>
+            <option value="4">Celeste</option>
+        </select>  
+        <p>Este párrafo está despues del select #jue (aplica ~)</p>
+        
+        <div class="card" style="width: 90%">
+            <div class="card-header">Header</div>
+            <img class="card-img-top" src="img/wallpaper.png" alt="top">
+            <div class="card-body">
+                <h4 class="card-title">Producto</h4>
+                <p class="card-text">Descripción del producto, y a la vez probando.</p>
+            </div>
+            <div class="card-footer">
+                <a href="producto.php" class="btn btn-primary">Ver producto</a>
+            </div>
+        </div>
+        <h2>Font Awesome</h2>
+        <i class="fa fa-check" style="font-size: 1vw; color: green"></i>
+        <i class="fa fa-cart-plus" style="font-size: 2vw; color: green"></i>
     </body>
 </html>
+
+
 
 
