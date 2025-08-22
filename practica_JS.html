@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Productos</title>
+        <script>
+            function saludar(){
+                alert("Hola");
+            }
+            function mostrarText(){
+                alert(document.getElementById("texto").value);
+            }
+            function tecla(e){
+                if(e.key == "Enter"){
+                    e.preventDefault();
+                    alert("Weeeena");
+                }
+            }
+        
+            let x, y, z;
+            x = 5;
+            y = 2;
+            z = x + y;
+            z = x % y;
+            z += 2;
+            z *= 2;
+            z = x** y;
+            console.log(z);
+
+            if (z < 10 && y === 23){
+                console.log("Z es unitario");
+            }
+            else if (z < 20) {
+                console.log("Z es decimal");
+            }
+            else {
+                console.log("Otro caso");
+            }
+
+            try {
+                alert("Hola");
+                throw "Muy lento";
+            } catch(err) {
+                console.log(err);
+            }
+            console.log(typeof(z));
+            class Persona {};
+            const p = new Persona();
+            if (p instanceof Persona){
+                alert("Es una persona");
+            }
+            let text;
+            if (Math.random() < 0.5){
+                text = "Cara";
+            } else {
+                text = "Sello";
+            }
+            for(let i=0; i < 3; i++){
+                console.log(i);
+            }
+
+        </script>
+    </head>
+    <body>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non libero repudiandae facere fuga, expedita impedit aliquid ex mollitia architecto, sapiente optio doloremque corporis quod quasi, molestias velit accusantium! Dignissimos, earum.</p>
+        <a href="index.html" target="_blank">Volver a la página principal</a>
+        <p id="msg"></p>
+        <select name="comuna" id="com"></select>
+        <script>
+            console.log("Empezó código de modificación")
+            document.write(4+5);
+            document.getElementById("msg").innertext = "Hola";
+            document.getElementById("com").innerHTML = '<option value="1">Santiago</option><option value="2">Concepción</option>'
+        </script>
+        <button type="button" onclick="alert('Botón');">Evento</button>
+        <button type="button" onclick="window.print();">Imprimir</button>
+        <button type="button" onclick="saludar();">Saludar</button>
+        <input id="texto" type="text" onkeyDown="tecla();"/>
+    </body>
+</html>
